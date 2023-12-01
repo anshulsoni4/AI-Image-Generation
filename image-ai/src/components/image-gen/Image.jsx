@@ -13,7 +13,6 @@ export const Image = () => {
         if (inputRef.current.value === "") {
             return 0;
         }
-        setLoading(true);
         const response = await fetch(
             "https://api.openai.com/v1/images/generations",
             {
@@ -35,7 +34,6 @@ export const Image = () => {
             let data = await response.json();
             let data_array = data.data;
             setImage_url(data_array[0].url);
-            setLoading(false);
 
     }
 
@@ -46,11 +44,11 @@ export const Image = () => {
         <div className="img-loading">
           <div className="image">
             <img src={image_url==="/"?default_image:image_url} alt="" />
-            <div className="loading">
-                <div className={loading?"loading-bar-full":"loading-bar"}>
-                    <div className={loading?"loading-text":"display-none"}>Loading...</div>
+            {/* <div className="loading">
+                <div className={"loading-bar"}>
+                    <div className="loading-text">Loading...</div>
                 </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
