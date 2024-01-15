@@ -1,5 +1,5 @@
 
-# Hi, I'm Anshul, and this is Image Generator Web App! 👋
+# Welcome to Image Generator Web App! 👋
 
 ## Screenshots
 
